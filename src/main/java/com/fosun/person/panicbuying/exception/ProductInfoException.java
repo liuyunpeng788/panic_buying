@@ -27,4 +27,24 @@ public class ProductInfoException extends RuntimeException {
         this.code = 4001;
         this.errorMsg = errorMsg;
     }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+    }
 }
