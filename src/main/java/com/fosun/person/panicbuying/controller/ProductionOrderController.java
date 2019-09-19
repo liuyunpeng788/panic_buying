@@ -6,8 +6,6 @@ import com.fosun.person.panicbuying.vo.requestVo.OrderVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.GET;
-
 /**
  * @author: created by aimy
  * date: 2019/6/29 19:07
@@ -24,16 +22,10 @@ public class ProductionOrderController {
     @PostMapping("/{id}")
     public ResponseVo<String> buyProduct(@PathVariable("id") Integer id,@RequestBody OrderVo vo){
 //        int num = 1;
-        int res = orderProductService.order(id,vo.getNum());
+        int res = orderProductService.update(id,vo.getNum());
         String msg = res>0?"下单成功":"下单失败";
         return new ResponseVo<>(msg);
     }
 
-    @GET
-    @ResponseBody
-    public ResponseVo<String> test(){
-        int res = 1;
-        String msg = res>0?"下单成功":"下单失败";
-        return new ResponseVo<>(msg);
-    }
+
 }

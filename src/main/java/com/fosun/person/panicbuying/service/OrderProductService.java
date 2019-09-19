@@ -18,7 +18,7 @@ public class OrderProductService {
     @Autowired
     private ProductStoreMapper productStoreMapper;
 
-    public int order(int prodId,int orderNum) throws ProductInfoException{
+    public int update(int prodId,int orderNum) throws ProductInfoException{
         ProductStore storeInfo = productStoreMapper.findById(prodId);
         if(null == storeInfo){
             throw new ProductInfoException("获取库存信息失败,请稍后再试");

@@ -2,6 +2,7 @@ package com.fosun.person.panicbuying;
 
 import com.fosun.person.panicbuying.domain.ProductStore;
 import com.fosun.person.panicbuying.mapper.ProductStoreMapper;
+import com.fosun.person.panicbuying.service.OrderProductService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,15 @@ public class PanicBuyingApplicationTests {
 
     @Autowired
     private ProductStoreMapper productStoreMapper;
+
+    @Autowired
+    private OrderProductService orderProductService;
+
+    @Test
+    public void order(){
+        int update = orderProductService.update(3, 3);
+        System.out.println("update.." + update);
+    }
     @Test
     public void contextLoads() {
         ProductStore store = new ProductStore();

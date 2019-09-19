@@ -1,10 +1,7 @@
 package com.fosun.person.panicbuying.mapper;
 
 import com.fosun.person.panicbuying.domain.ProductStore;
-import com.sun.net.httpserver.Authenticator;
 import org.apache.ibatis.annotations.*;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author: liumch
